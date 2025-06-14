@@ -4,8 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-
-
+  };
   outputs = { self, nixpkgs, ... } @ inputs:
  {
     nixosConfigurations.austin-nixos-pc = nixpkgs.lib.nixosSystem {
@@ -14,7 +13,6 @@
          ./hosts/austin-nixos-pc/configuration.nix
 	       ./modules/plasma.nix
          ./modules/net-pkgs.nix
-         ./modules/3d-print.nix
          ./modules/desktop-tools.nix
          ./modules/docker.nix
          ./modules/gaming.nix
@@ -28,5 +26,5 @@
          ./modules/amdfix.nix
          ];
 	  };
-  };
+ };
 }
